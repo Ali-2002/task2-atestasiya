@@ -20,13 +20,13 @@ class Messenger {
       });
     }
   
-    send(author, text) {
-      this.arr.push(new Message(author, this.gettime(), text));
-    }
-  
     gettime() {
       let now = new Date();
       return `${now.getHours()}:${now.getMinutes()}`;
+    }
+
+    send(author, text) {
+        this.arr.push(new Message(author, this.gettime(), text));
     }
   }
 
